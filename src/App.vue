@@ -1,24 +1,18 @@
 <template>
   <v-app id="app">
-    <AppBar>
-    </AppBar>
-    <AppHero>
-    </AppHero>
-    <top-companies>
-    </top-companies>
+    <app-bar>
+    </app-bar>
+    <v-main>
+       <router-view />
+    </v-main>
   </v-app>
 </template>
-
 <script>
-import AppBar from './components/AppBar.vue'
-import AppHero from './components/AppHero.vue'
-import TopCompanies from './components/TopCompanies.vue'
+import AppBar from '@/components/AppBar.vue'
 export default {
-
+  name: 'App',
   components: {
-    AppBar,
-    AppHero,
-    TopCompanies
+    AppBar
   }
 }
 </script>

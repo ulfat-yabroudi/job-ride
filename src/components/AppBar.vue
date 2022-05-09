@@ -16,6 +16,7 @@
         max-height="100"
         max-width="130"
         contain
+        @click="$router.push({name: 'HomePage'})"
       ></v-img>
 
       <!-- <v-app-bar-title class="ml-3"> JOB RIDE </v-app-bar-title> -->

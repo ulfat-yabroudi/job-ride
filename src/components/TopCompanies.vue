@@ -5,25 +5,27 @@
     hide-delimiter-background
     show-arrows-on-hover
   >
-   <v-sheet
-        :color="colors[i]"
+   <!-- <v-sheet
         height="100%"
-      >
+      > -->
     <v-carousel-item
       v-for="(slide, i) in slides"
       :key="i"
     >
-        <v-row
-          class="fill-height"
-          align="center"
-          justify="center"
-        >
-          <div class="text-h2">
-            {{ slide }} Slide
-          </div>
-        </v-row>
+  <v-card
+    class="mx-auto"
+    max-width="344"
+  >
+    <v-img
+      src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+      height="200px"
+    ></v-img>
+    <v-card-subtitle>
+      1,000 miles of wonder
+    </v-card-subtitle>
+  </v-card>
     </v-carousel-item>
-   </v-sheet>
+   <!-- </v-sheet> -->
   </v-carousel>
 </template>
 

@@ -24,7 +24,7 @@ export default {
 </script>
 <style>
 .v-application {
-  font-family: 'Teko' !important;
+  font-family: 'cairo' !important;
 }
 
 </style>

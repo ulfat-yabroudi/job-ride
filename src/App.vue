@@ -1,28 +1,30 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app id="app">
+    <AppBar>
+    </AppBar>
+    <AppHero>
+    </AppHero>
+    <top-companies>
+    </top-companies>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import AppBar from './components/AppBar.vue'
+import AppHero from './components/AppHero.vue'
+import TopCompanies from './components/TopCompanies.vue'
 export default {
-  name: 'App',
+
   components: {
-    HelloWorld
+    AppBar,
+    AppHero,
+    TopCompanies
   }
 }
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.v-application {
+  font-family: 'Teko' !important;
 }
+
 </style>

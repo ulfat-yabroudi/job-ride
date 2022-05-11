@@ -1,5 +1,5 @@
 <template>
-  <v-card height="600">
+  <v-card height="550" class="grey lighten-5">
     <v-row class="fill-height" align-content="center">
       <v-col class="text-left justify-start" cols="7" sm="6">
         <h2

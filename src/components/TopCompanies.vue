@@ -1,31 +1,39 @@
 <template>
   <v-carousel
+    align-content-center
     cycle
-    height="500"
-    hide-delimiter-background
+    height="400"
+    hide-delimiters
+    interval="2500"
     show-arrows-on-hover
+    class="grey lighten-3"
+    align="center"
+    justify="center"
   >
-   <!-- <v-sheet
-        height="100%"
-      > -->
-    <v-carousel-item
-      v-for="(slide, i) in slides"
-      :key="i"
-    >
-  <v-card
-    class="mx-auto"
-    max-width="344"
-  >
-    <v-img
-      src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-      height="200px"
-    ></v-img>
-    <v-card-subtitle>
-      1,000 miles of wonder
-    </v-card-subtitle>
-  </v-card>
+    <v-carousel-item v-for="(company, i) in companies" :key="i">
+      <v-card
+        align="center"
+        justify="center"
+        class="mx-auto mt-15 rounded-circle"
+        max-width="200"
+        max-height="200"
+        circle
+        rounded
+        elevation-1
+      >
+        <v-img
+          align="center"
+          justify="center"
+          class="rounded-circle"
+          :src="company.src"
+          height="200px"
+          width="200px"
+        ></v-img>
+        <v-card-subtitle justify-center class="mt-1 text-center  text-h5 black--text">
+          {{ company.subtitle }}
+        </v-card-subtitle>
+      </v-card>
     </v-carousel-item>
-   <!-- </v-sheet> -->
   </v-carousel>
 </template>
 
@@ -33,19 +41,47 @@
 export default {
   data () {
     return {
-      colors: [
-        'indigo',
-        'warning',
-        'pink darken-2',
-        'red lighten-1',
-        'deep-purple accent-4'
-      ],
-      slides: [
-        'First',
-        'Second',
-        'Third',
-        'Fourth',
-        'Fifth'
+      companies: [
+        {
+          src: require('../assets/syriatel.png'),
+          subtitle: 'Syriatel'
+        },
+        {
+          src: require('../assets/mtn.jpg'),
+          subtitle: 'MTN'
+        },
+        {
+          src: require('../assets/sham.jpg'),
+          subtitle: 'Sham Wings'
+        },
+        {
+          src: require('../assets/maryam.png'),
+          subtitle: 'Maryam Store'
+        },
+        {
+          src: require('../assets/talis.jpg'),
+          subtitle: 'Talis'
+        },
+        {
+          src: require('../assets/terranova.png'),
+          subtitle: 'Terranova'
+        },
+        {
+          src: require('../assets/ibnsina.jpg'),
+          subtitle: 'Ibn Sina'
+        },
+        {
+          src: require('../assets/ultram.jpg'),
+          subtitle: 'Ultra Medica'
+        },
+        {
+          src: require('../assets/asia.jpg'),
+          subtitle: 'Asia'
+        },
+        {
+          src: require('../assets/hafez.png'),
+          subtitle: 'AL-Hafez'
+        }
       ]
     }
   }
@@ -53,5 +89,4 @@ export default {
 </script>
 
 <style>
-
 </style>

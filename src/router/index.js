@@ -15,11 +15,6 @@ const routes = [
   //   name: 'LoginPage',
   //   component: () => import('../views/LoginPage.vue')
   // }
-  // // {
-  //   path: '/Register',
-  //   name: 'Register',
-  //   component: () => import('../views/Register.vue')
-  // },
   // {
   //   path: '/Profile',
   //   name: 'Profile',

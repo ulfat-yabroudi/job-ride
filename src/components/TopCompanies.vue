@@ -2,7 +2,7 @@
   <v-carousel
     align-content-center
     cycle
-    height="400"
+    height="450"
     hide-delimiters
     interval="2500"
     show-arrows-on-hover
@@ -10,7 +10,11 @@
     align="center"
     justify="center"
   >
-    <v-carousel-item v-for="(company, i) in companies" :key="i">
+       <v-col cols="12">
+        <div class="text-h2 text-center my-4 teal--text">
+          Tob Companies
+        </div>
+    <v-carousel-item  v-for="(company, i) in companies" :key="i">
       <v-card
         align="center"
         justify="center"
@@ -34,7 +38,9 @@
         </v-card-subtitle>
       </v-card>
     </v-carousel-item>
+       </v-col>
   </v-carousel>
+
 </template>
 
 <script>

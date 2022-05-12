@@ -17,8 +17,7 @@ export default {
 }
 </script>
 <style>
-.v-application {
-  font-family: 'cairo' !important;
+.v-main{
+  font-family: 'macondo' !important;
 }
-
 </style>

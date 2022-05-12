@@ -8,13 +8,18 @@ const routes = [
     path: '/',
     name: 'HomePage',
     component: () => import('../views/HomePage.vue')
+  },
+  {
+    path: '/EmployeeForm',
+    name: 'EmployeeForm',
+    component: () => import('../views/EmployeeForm.vue')
+  },
+  {
+    path: '/RegisterPage',
+    name: 'RegisterPage',
+    component: () => import('../views/RegisterPage.vue')
   }
   // ,
-  // {
-  //   path: '/login',
-  //   name: 'LoginPage',
-  //   component: () => import('../views/LoginPage.vue')
-  // }
   // {
   //   path: '/Profile',
   //   name: 'Profile',

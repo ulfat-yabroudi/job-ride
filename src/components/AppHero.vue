@@ -1,6 +1,10 @@
 <template>
-  <v-card height="550" class="grey lighten-5">
-    <v-row class="fill-height" align-content="center">
+  <v-card height="500" elevation="0">
+    <v-row
+      class="fill-height grey lighten-5"
+      align-content="center"
+      v-vue-aos="{ animationClass: 'animate__fadeIn animate__animated' }"
+    >
       <v-col class="text-left justify-start" cols="7" sm="6">
         <h2
           class="
@@ -8,10 +12,9 @@
             text-h2 text-left
             font-weight-thin
             ml-15
-            mt-13
+            mt-16
             align-center
             justify-center
-            black--text
           "
         >
           Choose your road <br />

@@ -36,7 +36,7 @@
       elevation="3"
       small
     >
-      Employee
+      Employee.
     </v-btn>
      <v-btn
       class="ml-12 mt-6 white--text teal accent-4"
@@ -44,7 +44,7 @@
       elevation="3"
       small
     >
-      Company
+      Company.
     </v-btn>
   </form>
   </v-card>

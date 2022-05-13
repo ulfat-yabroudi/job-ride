@@ -12,7 +12,7 @@
   >
     <v-col cols="12">
       <div class="text-h2 text-center my-4 teal--text">Tob Companies</div>
-      <v-carousel-item v-for="(company, i) in companies" :key="i">
+      <v-carousel-item v-for="(company, i) in companies" :key="i" >
         <v-card
           align="center"
           justify="center"
@@ -60,6 +60,7 @@ export default {
           src: require('../assets/sham.jpg'),
           subtitle: 'Sham Wings'
         },
+
         {
           src: require('../assets/maryam.png'),
           subtitle: 'Maryam Store'
@@ -72,6 +73,7 @@ export default {
           src: require('../assets/terranova.png'),
           subtitle: 'Terranova'
         },
+
         {
           src: require('../assets/ibnsina.jpg'),
           subtitle: 'Ibn Sina'
@@ -88,6 +90,7 @@ export default {
           src: require('../assets/hafez.png'),
           subtitle: 'AL-Hafez'
         }
+
       ]
     }
   }

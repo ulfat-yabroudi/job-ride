@@ -3,7 +3,7 @@
     <v-card
       flat
       tile
-      class="teal darken-1 white--text text-center"
+      class="teal accent-4 white--text text-center"
       height="220"
     >
       <v-card-text>

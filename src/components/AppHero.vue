@@ -47,8 +47,9 @@ export default {}
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 .h2 {
   margin-top: 100px;
-  font-family: "cairo";
+  font-family: "Abel";
 }
 </style>

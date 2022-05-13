@@ -10,6 +10,8 @@
       </BannerSec>
   <PeopleReviews>
   </PeopleReviews>
+  <FooterSec>
+  </FooterSec>
 
 </div>
 </template>
@@ -20,6 +22,7 @@ import TopCompanies from '@/components/TopCompanies.vue'
 import JobCategories from '@/components/JobCategories.vue'
 import BannerSec from '@/components/BannerSec.vue'
 import PeopleReviews from '@/components/PeopleReviews.vue'
+import FooterSec from '@/components/FooterSec.vue'
 export default {
   name: 'HomePage',
   components: {
@@ -27,14 +30,15 @@ export default {
     TopCompanies,
     JobCategories,
     BannerSec,
-    PeopleReviews
+    PeopleReviews,
+    FooterSec
   }
 }
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
 .text-h1{
  font-family: 'macondo';
-}
+} */
 </style>

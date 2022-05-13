@@ -9,16 +9,6 @@
       Register
     </h1>
   </v-card-text>
-<form>
-<v-card
-  class="mx-auto , mt-9"
-    max-width="390"
-    height="380"
-    >
-    <v-card-text>
-      <h1 class="text-center , font-weight-black , text-uppercase">
-      Register
-    </h1>
 <form class="mt-7">
     <v-text-field
       v-model="name"
@@ -53,7 +43,7 @@
       @click="submit"
       elevation="3"
       small
-    >
+      >
       Company.
     </v-btn>
   </form>

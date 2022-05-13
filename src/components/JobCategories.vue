@@ -8,26 +8,28 @@
       </v-col>
       <v-col v-for="(Category, i) in categories" :key="i" cols="3">
         <v-hover v-slot="{ hover }">
-        <v-card class="mx-auto" max-width="344" max-height="360" :class="{ scale: hover }">
-            <v-img
-              :src="Category.src"
-              height="200px"
-            ></v-img>
-          <v-card-title>
-            {{ Category.title }}
-          </v-card-title>
-          <v-card-subtitle>
-            {{ Category.subtitle }}
-          </v-card-subtitle>
-          <v-btn
-            class="teal accent-4 white--text ma-3"
-            elevation="2"
-            rounded
-            x-small
-            tile
-            >{{ Category.count }}</v-btn
+          <v-card
+            class="mx-auto"
+            max-width="344"
+            max-height="360"
+            :class="{ scale: hover }"
           >
-        </v-card>
+            <v-img :src="Category.src" height="200px"></v-img>
+            <v-card-title>
+              {{ Category.title }}
+            </v-card-title>
+            <v-card-subtitle>
+              {{ Category.subtitle }}
+            </v-card-subtitle>
+            <v-btn
+              class="teal accent-4 white--text ma-3"
+              elevation="2"
+              rounded
+              x-small
+              tile
+              >{{ Category.count }}</v-btn
+            >
+          </v-card>
         </v-hover>
       </v-col>
     </v-row>

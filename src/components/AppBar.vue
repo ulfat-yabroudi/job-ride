@@ -23,7 +23,7 @@
       <v-spacer></v-spacer>
 
       <v-btn
-        class="d-flex justify-center justify-space-around mr-5"
+        class="d-flex justify-center justify-space-around mr-3"
         large
         text
         height="35"
@@ -32,12 +32,14 @@
       </v-btn>
 
       <v-btn
-        class="d-flex justify-center justify-space-around mr-7"
+        class="d-flex justify-center justify-space-around mr-3"
         large
         text
         height="35"
       >
         Register
       </v-btn>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
     </v-app-bar>
 </template>

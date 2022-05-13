@@ -5,14 +5,17 @@
     <v-main>
        <router-view />
     </v-main>
+    <footer-sec />
   </v-app>
 </template>
 <script>
 import AppBar from '@/components/AppBar.vue'
+import FooterSec from '@/components/FooterSec.vue'
 export default {
   name: 'App',
   components: {
-    AppBar
+    AppBar,
+    FooterSec
   }
 }
 </script>

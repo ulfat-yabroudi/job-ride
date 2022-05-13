@@ -6,41 +6,41 @@
     hide-delimiters
     interval="2500"
     show-arrows-on-hover
-    class="grey lighten-3"
+    class="grey lighten-5"
     align="center"
     justify="center"
   >
-       <v-col cols="12">
-        <div class="text-h2 text-center my-4 teal--text">
-          Tob Companies
-        </div>
-    <v-carousel-item  v-for="(company, i) in companies" :key="i">
-      <v-card
-        align="center"
-        justify="center"
-        class="mx-auto mt-15 rounded-circle"
-        max-width="200"
-        max-height="200"
-        circle
-        rounded
-        elevation-1
-      >
-        <v-img
+    <v-col cols="12">
+      <div class="text-h2 text-center my-4 teal--text">Tob Companies</div>
+      <v-carousel-item v-for="(company, i) in companies" :key="i">
+        <v-card
           align="center"
           justify="center"
-          class="rounded-circle"
-          :src="company.src"
-          height="200px"
-          width="200px"
-        ></v-img>
-        <v-card-subtitle justify-center class="mt-1 text-center  text-h5 black--text">
-          {{ company.subtitle }}
-        </v-card-subtitle>
-      </v-card>
-    </v-carousel-item>
-       </v-col>
+          class="mx-auto mt-11 rounded-circle"
+          max-width="200"
+          max-height="200"
+          circle
+          rounded
+          elevation-1
+        >
+          <v-img
+            align="center"
+            justify="center"
+            class="rounded-circle"
+            :src="company.src"
+            height="200px"
+            width="200px"
+          ></v-img>
+          <v-card-subtitle
+            justify-center
+            class="mt-1 text-center text-h5 black--text"
+          >
+            {{ company.subtitle }}
+          </v-card-subtitle>
+        </v-card>
+      </v-carousel-item>
+    </v-col>
   </v-carousel>
-
 </template>
 
 <script>

@@ -1,13 +1,13 @@
 <template>
 <div>
-      <AppHero>
-    </AppHero>
+ <AppHero>
+  </AppHero>
+    <JobCategories>
+    </JobCategories>
     <TopCompanies>
     </TopCompanies>
-
-  <JobCategories>
-  </JobCategories> <BannerSec>
-  </BannerSec>
+      <BannerSec>
+      </BannerSec>
   <PeopleReviews>
   </PeopleReviews>
 

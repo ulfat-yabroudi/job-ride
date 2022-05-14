@@ -13,6 +13,16 @@ const routes = [
     path: '/login',
     name: 'LogInPage',
     component: () => import('../views/LogInPage.vue')
+  },
+  {
+    path: '/RegisterPage',
+    name: 'RegisterPage',
+    component: () => import('../views/RegisterPage.vue')
+  },
+  {
+    path: '/EmployeeForm',
+    name: 'EmploeeForm',
+    component: () => import('../views/EmployeeForm.vue')
   }
   // {
   //   path: '/Profile',

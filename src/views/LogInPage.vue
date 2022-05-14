@@ -50,7 +50,7 @@
         color="warning"
         @click="resetValidation"
       >
-        Reset Validation
+        Reset Validate
       </v-btn>
     </v-form>
 </template>

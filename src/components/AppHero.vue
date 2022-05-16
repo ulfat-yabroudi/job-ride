@@ -1,7 +1,7 @@
 <template>
   <v-card height="500" elevation="0">
     <v-row
-      class="fill-height grey lighten-5"
+      class="fill-height"
       align-content="center"
       v-vue-aos="{ animationClass: 'animate__fadeIn animate__animated' }"
     >

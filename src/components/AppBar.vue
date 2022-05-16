@@ -2,13 +2,11 @@
   <v-app-bar
     app
     dark
-    class="teal accent-4"
+    class=" teal accent-4"
     elevation="2"
-    flat
     height="60px"
-    absolute
-    scroll-target="#scrolling-techniques"
     fixed
+    scroll-target="#scrolling-techniques"
   >
     <v-img
       class="mx-2 ml-5"
@@ -27,6 +25,7 @@
       large
       text
       height="35"
+        @click="$router.push({ name: 'LogInPage' })"
     >
       LogIn
     </v-btn>
@@ -36,9 +35,20 @@
       large
       text
       height="35"
+        @click="$router.push({ name: 'RegisterPage' })"
     >
       Register
     </v-btn>
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+     <v-btn
+          icon
+          @click="$vuetify.theme.dark=!$vuetify.theme.dark"
+        >
+          <v-icon v-if="!$vuetify.theme.dark">
+            mdi-weather-night
+          </v-icon>
+          <v-icon v-else>
+            mdi-white-balance-sunny
+          </v-icon>
+        </v-btn>
   </v-app-bar>
 </template>

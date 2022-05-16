@@ -21,7 +21,7 @@ const routes = [
   },
   {
     path: '/EmployeeForm',
-    name: 'EmploeeForm',
+    name: 'EmployeeForm',
     component: () => import('../views/EmployeeForm.vue')
   }
   // {

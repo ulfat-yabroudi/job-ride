@@ -8,7 +8,6 @@
         <v-card
           class="mx-auto my-11"
           elevation="5"
-          color="#f3f3f3"
           max-width="400"
           max-height="300"
         >
@@ -19,7 +18,7 @@
               </v-list-item-avatar>
 
               <v-list-item-content>
-                <v-list-item-title class="black--text text-h6">{{
+                <v-list-item-title class="text-h6">{{
                   review.username
                 }}</v-list-item-title>
               </v-list-item-content>
@@ -34,7 +33,7 @@
             readonly
             size="14"
           ></v-rating>
-          <v-card-text class="text-h6 font-weight-bold black--text">
+          <v-card-text class="text-h6 font-weight-bold">
             {{ review.comment }}
           </v-card-text>
         </v-card>

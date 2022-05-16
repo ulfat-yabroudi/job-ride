@@ -67,19 +67,7 @@
           <v-col
           cols="12"
         >
-          <v-text-field
-            v-model="email"
-            :rules="emailRules"
-            label="Email"
-            required
-          ></v-text-field>
-        </v-col>
-      </v-row>
-      <v-row>
-          <v-col
-          cols="12"
-        >
-        <h3>Address</h3>
+        <h3 class="font-weight-thin">Address</h3>
           <v-text-field
             v-model="address"
             :rules="address"
@@ -92,7 +80,7 @@
           <v-col
           cols="12"
         >
-        <h3>City</h3>
+        <h3 class="font-weight-thin">City</h3>
           <v-select
             v-model="select"
             :items="city"
@@ -101,11 +89,46 @@
           ></v-select>
         </v-col>
       </v-row>
+                      <v-menu
+                  ref="menu"
+                  v-model="menu"
+                  :close-on-content-click="false"
+                  transition="scale-transition"
+                  offset-y
+                  class="mx-12"
+                  min-width="auto"
+                >
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-text-field
+                      class="mx-12"
+                      v-model="date"
+                      label="Birthday date"
+                      prepend-icon="mdi-calendar"
+                      readonly
+                      v-bind="attrs"
+                      v-on="on"
+                    >
+                      <v-date-picker
+                        v-model="date"
+                        :active-picker.sync="activePicker"
+                        :max="
+                          new Date(
+                            Date.now() - new Date().getTimezoneOffset() * 60000
+                          )
+                            .toISOString()
+                            .substr(0, 10)
+                        "
+                        min="1950-01-01"
+                        @change="save"
+                      ></v-date-picker>
+                    </v-text-field>
+                  </template>
+                </v-menu>
       <v-row>
           <v-col
           cols="12"
         >
-        <h3>Nationality</h3>
+        <h3 class="font-weight-thin">Nationality</h3>
           <v-select
             v-model="Nationality"
             :items="nathionality"
@@ -118,39 +141,14 @@
          <v-col
           cols="12"
         >
-        <v-menu
-      ref="menu"
-      v-model="menu"
-      :close-on-content-click="false"
-      transition="scale-transition"
-      offset-y
-      min-width="auto"
-         >
-         <template v-slot:activator="{ on, attrs }">
-        <v-text-field
-          v-model="date"
-          label="Birthday date"
-          prepend-icon="mdi-calendar"
-          readonly
-          v-bind="attrs"
-          v-on="on"
-        ></v-text-field>
-        </template>
-      <v-date-picker
-        v-model="date"
-        :active-picker.sync="activePicker"
-        :max="(new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)"
-        min="1950-01-01"
-        @change="save"
-      ></v-date-picker>
-      </v-menu>
+
       </v-col>
       </v-row>
       <v-row>
           <v-col
           cols="12"
         >
-        <h3>Gender</h3>
+        <h3 class="font-weight-thin">Gender</h3>
           <v-select
             v-model="Gender"
             :items="gender"
@@ -159,21 +157,9 @@
           ></v-select>
         </v-col>
       </v-row>
-       <v-row>
-          <v-col
-          cols="12"
-        >
-        <h3>Military Service</h3>
-          <v-select
-            v-model="Service"
-            :items="service"
-            label=""
-          ></v-select>
-        </v-col>
-      </v-row>
       <v-row>
       <v-col>
-       <h3>About Me</h3>
+       <h3 class="font-weight-thin">About Me</h3>
           <v-text-field
             v-model="aboutme"
             :rules="aboutme"
@@ -203,11 +189,6 @@ export default {
     nameRules: [
       v => !!v || 'Name is required',
       v => v.length <= 10 || 'Name must be less than 10 characters'
-    ],
-    email: '',
-    emailRules: [
-      v => !!v || 'E-mail is required',
-      v => /.+@.+/.test(v) || 'E-mail must be valid'
     ],
     MobileNumber: '',
     PhoneNumber: '',
@@ -241,10 +222,6 @@ export default {
     gender: [
       'male',
       'female'
-    ],
-    service: [
-      'postponed',
-      'unpostponed'
     ]
   })
 }

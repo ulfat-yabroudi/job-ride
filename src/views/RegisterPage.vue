@@ -74,28 +74,29 @@
                   <v-radio label="female" value="female" class="ml-3"></v-radio>
                 </v-radio-group>
                 <v-row justify="center">
-
-                    <v-checkbox label="company account" value="company account"   @change="checkBoxChecked($event)"></v-checkbox>
-                    <!-- UPLOAD FILE OR IMAGE -->
-                    <v-btn
-                      class=" white--text teal accent-4 ml-7 mt-5"
-                      small
-                      disabled
-                    >
-                    <v-icon>
-                     mdi-cloud-upload
-                    </v-icon>
-                      Upload
-                    </v-btn>
+                  <v-checkbox
+                    label="company account"
+                    value="company account"
+                    v-model="checked"
+                  ></v-checkbox>
+                  <!-- UPLOAD FILE OR IMAGE -->
+                  <v-btn
+                    class="white--text grey darken-2 ml-7 mt-5"
+                    small
+                    :disabled="!checked"
+                  >
+                    <v-icon class="mr-1"> mdi-cloud-upload </v-icon>
+                    Upload
+                  </v-btn>
                 </v-row>
-               <v-row justify="center">
-                <v-btn
-                  justify="left"
-                  class="teal accent-4 rounded-5 white--text "
-                  type="submit"
-                >
-                  Submit
-                </v-btn>
+                <v-row justify="center">
+                  <v-btn
+                    justify="left"
+                    class="teal accent-4 rounded-5 white--text"
+                    type="submit"
+                  >
+                    Submit
+                  </v-btn>
                 </v-row>
               </form>
             </validation-observer>
@@ -126,6 +127,7 @@ export default {
     dialog: '',
     show1: false,
     show2: true,
+    checked: false,
     passwordRules: [
       (value) => !!value || 'Please type password.',
       (value) => (value && value.length >= 6) || 'minimum 6 characters'
